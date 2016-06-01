@@ -1,0 +1,68 @@
+
+
+/*---Header---*/
+
+.main-header {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.top-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.top-links li {
+  margin: 3px 20px;
+}
+
+.top-links li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.top-links li a:hover {
+
+}
+
+.top-links input {
+  background: rgba(0,0,0,.1);
+  height: 28px;
+  border-radius: 5px;
+}
+
+/*---Images---*/
+
+.main-content {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.images {
+  width: 48%;
+  height: 35vw;
+  border: 1px solid black;
+  overflow:hidden;
+  border
+}
+
+.image {
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*---Footer---*/
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  height: 6vh;
+  width: 100%;
+  background-color: black;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app = "app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/reset.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./styles/main.css" media="screen" charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller = "controller">
+    <header class = "main-header">
+      <nav class = "top-nav">
+        <ul class = "top-links">
+          <li><a href="#">Link1</a></li>
+          <li><a href="#">Link2</a></li>
+          <li><a href="#">Link3</a></li>
+          <li><a href="#">Link4</a></li>
+          <li><input type="text" placeholder="Search for images" ng-model="input"></li>
+        </ul>
+      </nav>
+    </header>
+    <main class = "main-content">
+      <section class = "images" ng-repeat="image in images">
+        <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}" />
+      </section>
+      <!-- <ul ng-repeat="image in images">
+          <li class='friend'>
+          <img class="profile-pic" ng-src='{{friend.pic_square}}'>
+
+          <h3>{{image.name}}</h3>
+
+          <div class="image">
+              <img class="image" ng-src='{{image.url}}'>
+          </div>
+
+          <div class="likes">
+              {{likes}}
+          </div>
+
+          <div class="dislikes">
+              {{dislikes}}
+          </div>
+          </li>
+      </ul> -->
+    </main>
+    <footer class = "main-footer"></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+    <script src = "./scripts/app.js"></script>
+    <script src = "./scripts/controller.js"></script>
+  </body>
+</html>
