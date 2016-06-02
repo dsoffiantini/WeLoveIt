@@ -14,7 +14,7 @@
 }
 
 .top-links li {
-  margin: 3px 20px;
+  margin: 5px 20px;
 }
 
 .top-links li a {
@@ -30,23 +30,31 @@
   background: rgba(0,0,0,.1);
   height: 28px;
   border-radius: 5px;
+  width: 95vw;
 }
 
 /*---Images---*/
 
 .main-content {
-  margin: 20px 10px;
+  margin: 20px 5px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.main-content h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
 }
 
 .images {
   width: 48%;
   height: 35vw;
   border: 1px solid black;
-  overflow:hidden;
-  border
+  overflow: hidden;
+  margin: 4px 0px;
+  position: relative;
 }
 
 .image {
@@ -57,12 +65,50 @@
   transform: translate(-50%, -50%);
 }
 
-/*---Footer---*/
-
-.main-footer {
-  position: fixed;
-  bottom: 0px;
-  height: 6vh;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  background-color: black;
+  background: rgba(0, 0, 0, .5);
+  z-index: 1;
+  color: white;
+}
+
+.like {
+  background: url('../img/heart-outline.png') center no-repeat;
+  background-size: contain;
+  height: 60%;
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.counter {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid white;
+  padding: 2px 15px;
+}
+
+/*---@Media---*/
+
+@media (min-width:768px) {
+
+  .top-links {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-links input {
+    height: 30px;
+    border-radius: 5px;
+    width: 40vw;
+  }
+
 }

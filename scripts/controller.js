@@ -1,18 +1,9 @@
-angular.module("app").controller("controller", function($scope) {
+angular.module("app").controller("controller", function($scope, service) {
 
-  $scope.images = [
-    {
-      name: "Space",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
-      dislikes: 0
-    },
+  $scope.images = service.getImages();
 
-    {
-      name: "Space",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
-      dislikes: 0
-    }
-  ]
+  $scope.addLike = function(image) {
+    image.likes++;
+  };
+
 });

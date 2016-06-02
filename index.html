@@ -19,10 +19,21 @@
         </ul>
       </nav>
     </header>
+    <ui-router>
     <main class = "main-content">
-      <section class = "images" ng-repeat="image in images">
-        <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}" />
-      </section>
+      <h2>Categories</h2>
+      <!-- <ul class = "categories" ng-repeat="category in categories">
+          <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
+        <div class = "overlay"></div>
+      </ul> -->
+      <h2>Popular Images</h2>
+      <ul class = "images" ng-repeat="image in images | orderBy: '-likes' | filter: input">
+        <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
+        <div class = "overlay">
+          <div class="like" ng-click="addLike(image)"></div>
+          <div class="counter">{{image.likes}}</div>
+        </div>
+      </ul>
       <!-- <ul ng-repeat="image in images">
           <li class='friend'>
           <img class="profile-pic" ng-src='{{friend.pic_square}}'>
@@ -43,10 +54,12 @@
           </li>
       </ul> -->
     </main>
-    <footer class = "main-footer"></footer>
-
+  </ui-router>
+    <script src="./scripts/jquery-2.2.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+    <script src = "./scripts/main.js"></script>
     <script src = "./scripts/app.js"></script>
     <script src = "./scripts/controller.js"></script>
+    <script src = "./scripts/service.js"></script>
   </body>
 </html>
