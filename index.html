@@ -30,7 +30,7 @@
       <ul class = "images" ng-repeat="image in images | orderBy: '-likes' | filter: input">
         <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
         <div class = "overlay">
-          <div class="like" ng-click="addLike(image)"></div>
+            <div class="like" ng-click="addLike(image)"><img src="./img/heart-outline.png" alt="" /></img></div>
           <div class="counter">{{image.likes}}</div>
         </div>
       </ul>
