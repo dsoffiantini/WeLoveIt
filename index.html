@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/reset.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="./styles/main.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./styles/animate.css" media="screen" charset="utf-8">
     <title>I Heart It - Image Gallery Built in AngularJS</title>
   </head>
   <body ng-controller = "controller">
@@ -23,36 +24,17 @@
     <main class = "main-content">
       <h2>Categories</h2>
       <!-- <ul class = "categories" ng-repeat="category in categories">
-          <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
+          <img class = "image" ng-src="{{category.url}}" alt="{{category.name}}"/>
         <div class = "overlay"></div>
       </ul> -->
       <h2>Popular Images</h2>
       <ul class = "images" ng-repeat="image in images | orderBy: '-likes' | filter: input">
         <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
         <div class = "overlay">
-            <div class="like" ng-click="addLike(image)"><img src="./img/heart-outline.png" alt="" /></img></div>
-          <div class="counter">{{image.likes}}</div>
+            <div class="like animated fadeIn" ng-click="addLike(image)"><img src="./img/heart-outline.png" alt="" /></img></div>
+          <div class="counter animated fadeIn">{{image.likes}}</div>
         </div>
       </ul>
-      <!-- <ul ng-repeat="image in images">
-          <li class='friend'>
-          <img class="profile-pic" ng-src='{{friend.pic_square}}'>
-
-          <h3>{{image.name}}</h3>
-
-          <div class="image">
-              <img class="image" ng-src='{{image.url}}'>
-          </div>
-
-          <div class="likes">
-              {{likes}}
-          </div>
-
-          <div class="dislikes">
-              {{dislikes}}
-          </div>
-          </li>
-      </ul> -->
     </main>
   </ui-router>
     <script src="./scripts/jquery-2.2.4.min.js"></script>

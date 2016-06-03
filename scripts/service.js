@@ -1,36 +1,38 @@
 angular.module("app").service("service", function() {
 
+  function randomNum() {
+      return Math.floor(Math.random() * 1000);
+  }
+
   var categories = [
     {
-      name: "Space",
+      name: "Art",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
     },
 
     {
-      name: "Space",
+      name: "Architecture",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
     },
     {
-      name: "Space",
+      name: "Nature",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
     },
     {
-      name: "Space",
+      name: "Food",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
     },
     {
-      name: "Space",
+      name: "Business",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
     },
     {
-      name: "Space",
+      name: "Animals",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
+    },
+    {
+      name: "People",
+      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
     }
   ];
 
@@ -42,33 +44,33 @@ angular.module("app").service("service", function() {
     {
       name: "Space",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
+      likes: randomNum()
     },
 
     {
       name: "Space",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
+      likes: randomNum()
     },
     {
       name: "Space",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
+      likes: randomNum()
     },
     {
       name: "Space",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
+      likes: randomNum()
     },
     {
       name: "Space",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
+      likes: randomNum()
     },
     {
       name: "Space",
       url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
-      likes: 0,
+      likes: randomNum()
     }
   ];
 
