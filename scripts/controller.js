@@ -1,4 +1,4 @@
-angular.module("app").controller("controller", function($scope, service) {
+angular.module("app").controller("controller", function($scope, $state, $stateParams, service) {
 
   $scope.categories = service.getCategories();
 
@@ -7,5 +7,7 @@ angular.module("app").controller("controller", function($scope, service) {
   $scope.addLike = function(image) {
     image.likes++;
   };
+
+  $scope.image = $stateParams.imageName;
 
 });

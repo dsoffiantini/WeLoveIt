@@ -6,42 +6,35 @@
     <link rel="stylesheet" href="./styles/reset.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="./styles/main.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="./styles/animate.css" media="screen" charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="./img/heart-filled.png"/>
     <title>I Heart It - Image Gallery Built in AngularJS</title>
   </head>
   <body ng-controller = "controller">
     <header class = "main-header">
       <nav class = "top-nav">
         <ul class = "top-links">
-          <li><a href="#">Link1</a></li>
-          <li><a href="#">Link2</a></li>
-          <li><a href="#">Link3</a></li>
-          <li><a href="#">Link4</a></li>
+          <li><a ui-sref="home"><img border="0" alt="Heart It Logo" src="./img/heart it logo.png"></a></li>
+          <li><a ui-sref="categories">Categories</a></li>
+          <li><a ui-sref="about">About</a></li>
+          <li><a ui-sref="login">Login</a></li>
+          <li><a ui-sref="signup">Sign Up</a></li>
           <li><input type="text" placeholder="Search for images" ng-model="input"></li>
         </ul>
       </nav>
     </header>
-    <ui-router>
-    <main class = "main-content">
-      <h2>Categories</h2>
-      <!-- <ul class = "categories" ng-repeat="category in categories">
-          <img class = "image" ng-src="{{category.url}}" alt="{{category.name}}"/>
-        <div class = "overlay"></div>
-      </ul> -->
-      <h2>Popular Images</h2>
-      <ul class = "images" ng-repeat="image in images | orderBy: '-likes' | filter: input">
-        <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
-        <div class = "overlay">
-            <div class="like animated fadeIn" ng-click="addLike(image)"><img src="./img/heart-outline.png" alt="" /></img></div>
-          <div class="counter animated fadeIn">{{image.likes}}</div>
-        </div>
+    <ui-view></ui-view>
+    <footer class = "main-footer">
+      <ul>
+
       </ul>
-    </main>
-  </ui-router>
+    </footer>
     <script src="./scripts/jquery-2.2.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js" charset="utf-8"></script>
     <script src = "./scripts/main.js"></script>
     <script src = "./scripts/app.js"></script>
     <script src = "./scripts/controller.js"></script>
+    <script src = "./scripts/imageController.js"></script>
     <script src = "./scripts/service.js"></script>
   </body>
 </html>

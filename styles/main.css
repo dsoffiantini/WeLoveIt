@@ -7,12 +7,17 @@
 
 .top-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .top-links li {
-  margin: 5px 20px;
+  margin: 5px 10px;
+}
+
+.top-links li img{
+  width: 70%;
+  height: 70%;
 }
 
 .top-links li a {
@@ -20,8 +25,12 @@
   color: gray;
 }
 
-.top-links li a:hover {
+.top-links a:hover {
+  border-bottom: 2px solid pink;
+}
 
+.top-links a:active {
+  border-bottom: 2px solid pink;
 }
 
 .top-links input {
@@ -34,39 +43,58 @@
 /*---Images---*/
 
 .main-content {
-  margin: 20px 5px;
   display: flex;
   flex-wrap: wrap;
+  margin: 10px 5px;
 }
 
 .main-content h2 {
   width: 100%;
-  text-align: center;
   font-size: 30px;
+  text-align: center;
 }
 
 .category-container {
   display: flex;
-  justify-content: center;
-  height: 20vh;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.category {
+.categories {
   width: 24%;
+  margin: 3px auto;
+  position: relative;
+}
+
+.category {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.category-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 14px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .images {
-  width: 47%;
-  height: 35vw;
+  width: 100%;
   overflow: hidden;
   margin: 4px 4px;
   position: relative;
-  border-radius: 8px;
 }
 
 .image {
-  height: 100%;
+  max-width:100%;
   position: relative;
   top: 50%;
   left: 50%;
@@ -86,12 +114,14 @@
 
 .like {
   background-size: cover;
-  width: 32%;
-  height: 50%;
+  width: 25%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: rgba(255,255,255,.7);
+  border-radius: 50%;
+
 }
 
 .like img{
@@ -108,6 +138,35 @@
   padding: 2px 15px;
 }
 
+
+/*---UI-View Image---*/
+
+.imageUrlContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 5px auto;
+}
+
+.imageUrlContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.imageInformation {
+  display: flex;
+  width: 80%;
+  margin: 5px auto;
+}
+
+
+/*---Footer---*/
+
+/*.main-footer {
+  height: 200px;
+  background: lightgray;
+}*/
+
 /*---@Media---*/
 
 @media (min-width:768px) {
@@ -117,10 +176,19 @@
     align-items: center;
   }
 
+  .top-links li img{
+    width: 100%;
+    height: 100%;
+  }
+
   .top-links input {
     height: 30px;
     border-radius: 5px;
     width: 40vw;
+  }
+
+  .category-overlay {
+    font-size: 28px;
   }
 
   .images {
