@@ -19,6 +19,6 @@ angular.module("app").controller("imageController", function($scope, $stateParam
 
   $scope.imageGrab();
 
-  
+  $scope.tags = service.getTags();
 
 });

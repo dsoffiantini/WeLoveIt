@@ -6,37 +6,37 @@ angular.module("app").service("service", function() {
 
   var categories = [
     {
-      name: "Art",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      name: "Holidays",
+      url: "./img/holidays.jpg",
     },
 
     {
       name: "Architecture",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      url: "./img/architecture.jpg",
     },
     {
       name: "Nature",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      url: "./img/nature.jpg",
     },
     {
-      name: "Food",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      name: "Food & Drink",
+      url: "./img/food.jpg",
     },
     {
       name: "Business",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      url: "./img/business.jpg",
     },
     {
       name: "Animals",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      url: "./img/animals.jpg",
     },
     {
       name: "People",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      url: "./img/people.jpg",
     },
     {
       name: "Fashion",
-      url: "https://pixabay.com/static/uploads/photo/2015/02/04/17/18/space-624054_960_720.jpg",
+      url: "./img/fashion.jpg",
     }
   ];
 
@@ -48,7 +48,10 @@ angular.module("app").service("service", function() {
     {
       name: "Space",
       url: "./img/space.jpg",
-      likes: randomNum()
+      likes: randomNum(),
+      category: "Space",
+      description: "The Milky Way Galaxy",
+      tags: ['space', 'galaxy', 'amazing', 'pretty']
     },
 
     {
@@ -82,5 +85,9 @@ angular.module("app").service("service", function() {
   this.getImages = function() {
     return images;
   };
+
+  this.getTags = function() {
+    return images["tags"];
+  }
 
 });
