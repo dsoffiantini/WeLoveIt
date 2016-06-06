@@ -1,20 +1,27 @@
 /*---Loading Gif---*/
 
 .loading-gif {
-  height: 100vh;
-  width: 100%;
+  position: absolute;
+  top: 0;
   background: black;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-.loading-gif p{
+.loading-gif img {
+  flex: 1;
+}
+
+.loading-gif p {
   color: white;
   font-family: 'Press Start 2P', cursive;
-  width: 100%;
   text-align: center;
+  z-index: 1001;
+  width: 100%;
 }
 
 /*---Header---*/
@@ -177,12 +184,27 @@
 
 .imageUrlImage {
   width: 80%;
+  position: relative;
 }
 
 .imageUrlContainer img {
   width: 100%;
   height: 100%;
   margin: 0px auto;
+}
+
+.shareImage {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255,255,255,.5);
+  height: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shareImage img {
+  max-height: 80%;
 }
 
 .below-image {
@@ -221,9 +243,10 @@
   border-radius: 5px;
 }
 
-input {
+.effects input {
   width: 30px;
   text-align: right;
+  margin-left: 10px;
 }
 
 /*---UI-View Category---*/

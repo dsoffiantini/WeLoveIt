@@ -2,6 +2,15 @@ $(document).ready(function(){
 
   $('.loading-gif').fadeOut(3000);
 
+  $('.shareImage').hide();
+
+  $('.shareImage').hover(function(){
+    $(this).show();
+  },
+  function() {
+    $(this).hide();
+  });
+
   $('.overlay').hide();
 
   $('.images').hover(function(){
