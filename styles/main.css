@@ -91,7 +91,8 @@
 }
 
 .images {
-  width: 100%;
+  width: 46%;
+  height: 30vw;
   overflow: hidden;
   margin: 4px 4px;
   position: relative;
@@ -103,6 +104,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 1px solid #e67e92;
 }
 
 .overlay {
@@ -147,27 +149,123 @@
 
 .imageUrlContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 5px 0px;
+  margin: 5px auto;
+  background: black;
 }
 
 .imageUrlImage {
-  width: 100%;
+  width: 80%;
 }
 
 .imageUrlContainer img {
   width: 100%;
   height: 100%;
+  margin: 0px auto;
+}
+
+.below-image {
+  display: flex;
+  width: 80%;
+  margin: 5px auto;
+  justify-content: space-around;
 }
 
 .imageInformation {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 5px 0px;
-  font-size: 36px;
+  font-size: 24px;
+}
+
+.effects {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.effects li {
+  width: 20%;
+}
+
+.editButton {
+  background: #e67e92;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+}
+
+.resetButton {
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+input {
+  width: 30px;
+  text-align: right;
+}
+
+/*---UI-View Category---*/
+
+.categoryPageContainer {
+  width: 95%;
+  display: flex;
+  margin: 5px auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.categoryImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.categoryPageImages {
+  width: 48%;
+  overflow: hidden;
+  margin: 4px 4px;
+  display: flex;
+}
+
+.categoryPageImage {
+  width:100%;
+  border: 1px solid #e67e92;
+}
+
+/*---UI-View About---*/
+
+.about-container {
+  width: 50%;
+  display: flex;
+  margin: 5px auto;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-container h2{
+  font-size: 60px;
+}
+
+.pink-text {
+  color: pink;
+}
+
+.about-container p{
+  font-size: 40px;
+}
+
+.about-list {
+  list-style: circle;
+  list-style-position: inside;
+}
+
+.about-list li {
+  margin: 10px 0px;
+  font-size: 28px;
 }
 
 

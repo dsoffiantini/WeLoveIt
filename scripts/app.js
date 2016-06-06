@@ -9,7 +9,13 @@ angular.module("app", ['ui.router'])
     })
     .state('categories', {
       url: '/categories',
-      templateUrl: 'categories.html'
+      templateUrl: 'categories.html',
+      controller: 'categoryController'
+    })
+    .state('category', {
+      url: '/categories/:categoryName',
+      templateUrl: 'categoryPage.html',
+      controller: 'categoryController'
     })
     .state('about', {
       url: '/about',
