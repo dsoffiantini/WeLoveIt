@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $('.loading-gif').fadeOut(3000);
+
   $('.overlay').hide();
 
   $('.images').hover(function(){
