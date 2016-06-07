@@ -170,6 +170,27 @@
   padding: 2px 15px;
 }
 
+/*---Pagination---*/
+
+.pagination {
+  display: flex;
+  margin: 5px auto;
+  font-size: 28px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 5px;
+}
+
+.pagination a:hover {
+  color: #e67e92;
+}
+
+.pagination a:visited {
+  color: black;
+}
 
 /*---UI-View Image---*/
 
@@ -196,15 +217,17 @@
 .shareImage {
   position: absolute;
   bottom: 0;
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.25);
   height: 6%;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  z-index: 5;
 }
 
-.shareImage img {
-  max-height: 80%;
+.shareImage a {
+  height: 50%;
 }
 
 .below-image {

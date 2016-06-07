@@ -12,7 +12,7 @@
   </div>
   <h2>Popular Images</h2>
   <div class="image-container">
-  <ul class = "images" dir-paginate="image in images | orderBy: '-likes' | filter: input | itemsPerPage: 16">
+  <ul class = "images" ng-repeat="image in images | orderBy: '-likes' | filter: input ">
   <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
     <a ui-sref="image({imageName: image.name})">
     <div class = "overlay">
@@ -22,9 +22,9 @@
     </a>
   </ul>
   </div>
-
+  <!-- <dir-pagination-controls class="pagination"></dir-pagination-controls> -->
 </main>
-<dir-pagination-controls></dir-pagination-controls>
+
 <script src="./scripts/jquery-2.2.4.min.js"></script>
 <script src = "./scripts/main.js"></script>
-<script src="./node_modules/angular-utils-pagination/dirPagination.js"></script>
+<!-- <script src="./scripts/dirPagination.js"></script> -->

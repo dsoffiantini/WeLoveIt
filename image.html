@@ -4,10 +4,10 @@
         <div class="imageUrlImage">
             <img class="editImage" src="{{myImage.url}}" alt="{{image}}"/>
             <div class="shareImage">
-              <img src="./img/icons/facebook.svg" alt="Facebook" />
-              <img src="./img/icons/twitter.svg" alt="Twitter" />
-              <img src="./img/icons/twitter-2.svg" alt="Twitter" />
-              <img src="./img/icons/pinterest.svg" alt="Pinterest" />
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{imageUrl}}"><img src="./img/icons/facebook.svg" alt="Facebook" /></a>
+              <a href="https://twitter.com/intent/tweet?url={{imageUrl}}"><img src="./img/icons/twitter.svg" alt="Twitter" /></a>
+              <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={{imageUrl}}" + ><img src="./img/icons/twitter-2.svg" alt="Tumblr" /></a>
+              <a href="https://www.pinterest.com/pin/create/button/?&url={{imageUrl}}"><img src="./img/icons/pinterest.svg" alt="Pinterest" /></a>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
             <div>Likes:
                 {{myImage.likes}}</div>
             <div>Categories:
-                {{myImage.category}}</div>
+                {{myImage.category}} {{state}}</div>
         </div>
         <div class="imageEditor">
             <ul class="effects">

@@ -1,13 +1,5 @@
 $(document).ready(function(){
 
-  $('.shareImage').hide();
-
-  $('.shareImage').hover(function(){
-    $(this).show();
-  },
-  function() {
-    $(this).hide();
-  });
 
   $('.overlay').hide();
 
@@ -47,6 +39,14 @@ $(document).ready(function(){
     $('.editImage').css('-webkit-filter', 'brightness(' + 100 + '%) blur(' + 0 + 'px) contrast(' + 100 + '%) grayscale(' + 0 + '%) invert(' + 0 + '%) opacity(' + 100 + '%) saturate(' + 100 + '%) sepia(' + 0 + '%) hue-rotate(' + 0 + 'deg)');
   })
 
+  $('.shareImage').hide();
+
+  $('.imageUrlImage').hover(function(){
+    $(this).find('.shareImage').show();
+  },
+  function() {
+    $(this).find('.shareImage').hide();
+  });
 
 
 

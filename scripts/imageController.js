@@ -1,10 +1,12 @@
-angular.module("app").controller("imageController", function($scope, $stateParams, service) {
+angular.module("app").controller("imageController", function($scope, $stateParams, $location, service) {
 
   $scope.images = service.getImages();
 
   $scope.image = $stateParams.imageName;
 
   $scope.imageObject = $stateParams;
+
+  $scope.imageUrl = $location.path();
 
   $scope.myImage;
 
