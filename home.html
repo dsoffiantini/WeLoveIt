@@ -1,9 +1,3 @@
-<div class="loading-gif">
-  <img src="./img/Dog.gif" alt="Pupper"/>
-  <p>
-    building a photo website in angular...It fills you with DETERMINATION
-  </p>
-</div>
 <main class = "main-content">
   <h2>Categories</h2>
   <div class="category-container">
@@ -18,7 +12,7 @@
   </div>
   <h2>Popular Images</h2>
   <div class="image-container">
-  <ul class = "images" ng-repeat="image in images | orderBy: '-likes' | filter: input">
+  <ul class = "images" dir-paginate="image in images | orderBy: '-likes' | filter: input | itemsPerPage: 16">
   <img class = "image" ng-src="{{image.url}}" alt="{{image.name}}"/>
     <a ui-sref="image({imageName: image.name})">
     <div class = "overlay">
@@ -28,6 +22,9 @@
     </a>
   </ul>
   </div>
+
 </main>
+<dir-pagination-controls></dir-pagination-controls>
 <script src="./scripts/jquery-2.2.4.min.js"></script>
 <script src = "./scripts/main.js"></script>
+<script src="./node_modules/angular-utils-pagination/dirPagination.js"></script>
